@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import android.app.ListActivity;
 import android.content.Intent;
+import android.database.Cursor;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -19,38 +20,25 @@ import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
 public class PlayListActivity extends ListActivity {
-	// Songs List
+	// List for songs
 	public ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
+	// Cursor
+	Cursor cursor;
+	SongsManager songsManager;
+		
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.playlist);
-
-		/*if (savedInstanceState == null) {
-			getSupportFragmentManager().beginTransaction()
-					.add(R.id.container, new PlaceholderFragment()).commit();
-		}*/
 		
-		ArrayList<HashMap<String, String>> songsListData = new ArrayList<HashMap<String, String>>();
+		songsManager = new SongsManager(this);
+		this.songsList = songsManager.getplaylist();
 		
-		SongsManager plm = new SongsManager();
-		// Get all songs from sdcard
-		this.songsList = plm.getPlaylist();
-		
-		// Looping through playlist
-		for(int i = 0 ; i < songsList.size(); i++){
-			// Creating new Hash Map
-			HashMap<String, String> song = songsList.get(i);
-			
-			//Adding Hash List to Array List
-			songsListData.add(song);
-		}
-		
+						
 		// Adding menu item to list view
-		ListAdapter adapter = new SimpleAdapter(this, songsListData,
-				R.layout.playlist_item, new String[] {"songTitle"}, new int[]{
-				R.id.songTitle });
+		ListAdapter adapter = new SimpleAdapter(this, songsList, R.layout.playlist_item,
+				new String[] {"songTitle"}, new int[]{ R.id.songTitle });
 		
 		setListAdapter(adapter);
 		
@@ -77,7 +65,8 @@ public class PlayListActivity extends ListActivity {
 		});
 		
 	}
-
+	
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 

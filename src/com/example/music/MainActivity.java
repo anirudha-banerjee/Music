@@ -53,6 +53,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.fragment_main);
+		
+		
 
 		
 		
@@ -68,7 +70,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		
 		//Media Player
 		player = new MediaPlayer();
-		songsManager = new SongsManager();
+		songsManager = new SongsManager(this);
 		utils = new Utilities();
 		
 		//Listeners
@@ -76,7 +78,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		player.setOnCompletionListener(this); //important
 		
 		// Getting all songs list
-		songsList = songsManager.getPlaylist();
+		songsList = songsManager.getplaylist();
 		
 		// Play first song by default
 		//playSong(0);
@@ -361,8 +363,11 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	
 	@Override
 	public void onDestroy(){
-		super.onDestroy();
-		//player.release();
+		if(player != null){
+			player.release();
+			player = null;
+		}
+		
 	}
 	
 
@@ -385,7 +390,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+	
+		
 	/**
 	 * A placeholder fragment containing a simple view.
 	 */

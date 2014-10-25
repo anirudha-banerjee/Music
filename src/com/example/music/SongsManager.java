@@ -1,49 +1,83 @@
 package com.example.music;
 
-import java.io.File;
-import java.io.FilenameFilter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import android.os.Environment;
+import android.content.ContentResolver;
+import android.content.Context;
+import android.content.ContextWrapper;
+import android.database.Cursor;
+import android.net.Uri;
+import android.provider.MediaStore;
+import android.widget.Toast;
 
-public class SongsManager {
-	//SD card path
-	final String Media_Path = Environment.getExternalStorageDirectory() + "/Sounds/songs";
+public class SongsManager extends ContextWrapper {
+	
 	private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
 	
+	Cursor cursor;
+	
+	
 	//Constructor
-	public SongsManager(){
+	public SongsManager(Context base){
+		super(base);
 		
 	}
 	/**
 	 * Function to read all mp3 files from
 	 * SD card
 	 */
-	public ArrayList<HashMap<String, String>> getPlaylist(){
-		File home = new File(Media_Path);
+	public ArrayList<HashMap<String, String>> getplaylist(){
+		ContentResolver cr = getContentResolver();
 		
-		if(home.listFiles(new FileExtensionFilter()) != null){
-			for(File file : home.listFiles(new FileExtensionFilter())){
+
+		
+		// Process to read all music files from sdcard
+		
+		
+		
+		Uri uri = android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+						
+		// Database elect statement
+		String[] projection = {
+				MediaStore.Audio.Media.DISPLAY_NAME,
+				MediaStore.Audio.Media.DATA
+		};
+				
+		// Query
+		cursor = cr.query(uri, projection, null, null, null);
+		
+		if(cursor == null){
+			// query failed
+		}
+		else if(!cursor.moveToFirst()){
+			// no media on device
+			Toast.makeText(this, "No Media Found!!!", Toast.LENGTH_SHORT).show();
+		}
+		else{
+			
+			int dataColumn = cursor.getColumnIndex(MediaStore.Audio.Media.DATA);
+			int titleColumn = cursor.getColumnIndex(MediaStore.Audio.Media.DISPLAY_NAME);
+			
+			while (cursor.moveToNext()){
+							
+				String data = cursor.getString(dataColumn);
+				String title = cursor.getString(titleColumn);
+				
 				HashMap<String, String> song = new HashMap<String, String>();
-				song.put("songTitle", file.getName().substring(0, (file.getName().length() -4)));
-				song.put("songPath", file.getPath());
+				song.put("songTitle", title);
+				song.put("songPath", data);
 				
 				// Adding each song to song list
 				songsList.add(song);
+				
 			}
+			
 		}
+		
 		// Return songs list array
 		return songsList;
 	}
 	
-	/**
-	 * Class to filter files which have .mp3 extension
-	 */
-	class FileExtensionFilter implements FilenameFilter{
-		public boolean accept(File dir, String name){
-			return (name.endsWith(".mp3") || name.endsWith(".mp3"));
-		}
-	}
-
+	
 }
