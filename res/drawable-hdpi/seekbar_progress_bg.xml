@@ -6,7 +6,7 @@
                 android:src="@drawable/progress_fill"
                 android:tileMode="repeat"
                 android:antialias="true"
-                android:dither="false"
+                android:dither="true"
                 android:filter="false"
                 android:gravity="left" />
         </clip>

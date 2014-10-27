@@ -364,8 +364,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	@Override
 	public void onDestroy(){
 		if(player != null){
-			player.release();
-			player = null;
+			super.onDestroy();
+			
 		}
 		
 	}
