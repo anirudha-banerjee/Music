@@ -6,6 +6,7 @@ import java.util.HashMap;
 import java.util.Random;
 
 import android.content.Intent;
+import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
@@ -52,6 +53,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setContentView(R.layout.fragment_main);
 		
 		
@@ -96,14 +98,14 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 			if(player != null){
 				player.pause();
 				
-				btnPlay.setImageResource(R.drawable.btn_play);
+				btnPlay.setImageResource(R.drawable.play_default);
 			}
 		}
 		else{
 			if(player != null){
 				player.start();
 				
-				btnPlay.setImageResource(R.drawable.btn_pause);
+				btnPlay.setImageResource(R.drawable.ic_av_pause);
 			}
 		}
 	}
@@ -180,7 +182,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		if(isRepeat){
 			isRepeat = false;
 			Toast.makeText(this, "Repeat is off!!!", Toast.LENGTH_SHORT).show();
-			btnRepeat.setImageResource(R.drawable.btn_repeat);
+			btnRepeat.setImageResource(R.drawable.ic_av_replay);
 		}
 		else{
 			// Turn repeat true
@@ -188,8 +190,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 			Toast.makeText(this, "Repeat is on!!!", Toast.LENGTH_SHORT).show();
 			// Turn shuffle false
 			isShuffle = false;
-			btnRepeat.setImageResource(R.drawable.btn_repeat);
-			btnShuffle.setImageResource(R.drawable.btn_shuffle);
+			btnRepeat.setImageResource(R.drawable.ic_av_replay_pressed);
+			btnShuffle.setImageResource(R.drawable.ic_av_shuffle);
 		}
 	}
 	
@@ -200,7 +202,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		if(isShuffle){
 			isShuffle = false;
 			Toast.makeText(this, "Shuffle is off!!!", Toast.LENGTH_SHORT).show();
-			btnShuffle.setImageResource(R.drawable.btn_shuffle);
+			btnShuffle.setImageResource(R.drawable.ic_av_shuffle);
 		}
 		else{
 			// Turn shuffle true
@@ -208,8 +210,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 			Toast.makeText(this, "Shuffle is on!!!", Toast.LENGTH_SHORT).show();
 			// Turn repeat off
 			isRepeat = false;
-			btnShuffle.setImageResource(R.drawable.btn_shuffle);
-			btnRepeat.setImageResource(R.drawable.btn_repeat);
+			btnShuffle.setImageResource(R.drawable.ic_av_shuffle_pressed);
+			btnRepeat.setImageResource(R.drawable.ic_av_replay);
 		}
 	}
 	
