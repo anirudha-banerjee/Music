@@ -49,6 +49,8 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	
 	private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
 	
+	
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -347,7 +349,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		}
 		else if(isShuffle){
 			Random rand = new Random();
-			currentSongIndex = rand.nextInt((songsList.size() - 1) -0 + 1);
+			currentSongIndex = rand.nextInt((songsList.size() - 1));
 			playSong(currentSongIndex);
 		}
 		else{
