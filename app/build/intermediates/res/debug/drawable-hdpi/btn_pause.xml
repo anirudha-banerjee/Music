@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:drawable="@drawable/ic_av_pause_pressed"
+        android:state_focused="true"
+        android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_av_pause_pressed"
+        android:state_focused="false"
+        android:state_pressed="true" />
+    <item android:drawable="@drawable/ic_av_pause_pressed"
+        android:state_focused="true" />
+    <item android:drawable="@drawable/ic_av_pause"
+        android:state_focused="false"
+        android:state_pressed="false" />
+
+</selector>
+<!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/src/main/res/drawable-hdpi/btn_pause.xml -->

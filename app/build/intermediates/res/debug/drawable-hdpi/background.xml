@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <gradient 
+        android:type="radial"
+        android:centerX="50%"
+        android:centerY="50%"
+        android:startColor="#D8BA9D5D"
+        android:endColor="#FF917A50"
+        android:gradientRadius="100" />
+    
+</shape>
+<!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/src/main/res/drawable-hdpi/background.xml -->

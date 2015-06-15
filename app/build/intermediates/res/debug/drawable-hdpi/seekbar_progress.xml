@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item android:id="@+id/background" > 
+        <nine-patch xmlns:android="http://schemas.android.com/apk/res/android"
+            android:src="@drawable/progress_box"
+            android:dither="true" />       
+    </item>
+    <item android:id="@+id/secondaryProgress" >
+        <clip>
+            <shape>
+                <gradient
+                    android:startColor="#000000"
+                    android:centerColor="#000000"
+                    android:centerY="0.75"
+                    android:endColor="#000000"
+                    android:angle="270" />
+            </shape>
+        </clip>
+    </item>
+    <item android:id="@+id/progress"
+        android:drawable="@drawable/seekbar_progress_bg" />
+
+</layer-list>
+<!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/src/main/res/drawable-hdpi/seekbar_progress.xml -->
