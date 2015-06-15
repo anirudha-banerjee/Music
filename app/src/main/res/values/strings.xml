@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Music</string>
+    <string name="action_settings">Settings</string>
+    <string name="welcome">WELCOME</string>
+    <string name="desc">Playlist</string>
+    <string name="desc2">Thumbnail</string>
+    <string name="desc3">Previous</string>
+    <string name="desc4">Rewind</string>
+    <string name="desc5">Play</string>
+    <string name="desc6">Next</string>
+    <string name="desc7">Repeat</string>
+    <string name="desc8">Shuffle</string>
+    <string name="title_activity_play_list">PlayList</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
