@@ -6,25 +6,21 @@ import java.util.HashMap;
 import java.util.Random;
 
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
-import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.SeekBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainActivity extends ActionBarActivity implements OnCompletionListener, SeekBar.OnSeekBarChangeListener{
+public class MainActivity extends AppCompatActivity implements OnCompletionListener, SeekBar.OnSeekBarChangeListener{
 	private static final String tagg = "MainActivity :";
 	
 	private ImageButton btnPlay;
@@ -39,15 +35,12 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	private MediaPlayer player;
 	// Handler to update timer, progressbar, etc.
 	private Handler mHandler = new Handler();
-	private SongsManager songsManager;
 	private Utilities utils;
-	private int seekForwardTime = 5000; //5000 msecs
-	private int seekRewindTime = 5000; //5000 msecs
 	private int currentSongIndex = 0;
 	private boolean isShuffle = false;
 	private boolean isRepeat = false;
 	
-	private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
+	private ArrayList<HashMap<String, String>> songsList = new ArrayList<>();
 	
 	
 	
@@ -55,12 +48,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 		setContentView(R.layout.fragment_main);
-		
-		
-
-		
 		
 		// All player buttons
 		btnPlay = (ImageButton)findViewById(R.id.btnPlay);
@@ -74,7 +62,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		
 		//Media Player
 		player = new MediaPlayer();
-		songsManager = new SongsManager(this);
+		SongsManager songsManager = new SongsManager(this);
 		utils = new Utilities();
 		
 		//Listeners
@@ -87,8 +75,6 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		// Play first song by default
 		//playSong(0);
 		
-		
-		
 	}
 	
 	/**
@@ -97,18 +83,14 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	public void play(View view){
 		// Check for already playing
 		if(player.isPlaying()){
-			if(player != null){
-				player.pause();
-				
-				btnPlay.setImageResource(R.drawable.play_default);
-			}
+			player.pause();
+
+			btnPlay.setImageResource(R.drawable.play_default);
 		}
 		else{
-			if(player != null){
-				player.start();
-				
-				btnPlay.setImageResource(R.drawable.ic_av_pause);
-			}
+			player.start();
+
+			btnPlay.setImageResource(R.drawable.ic_av_pause);
 		}
 	}
 	
@@ -118,6 +100,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	public void forward(View view){
 		int currentPosition = player.getCurrentPosition();
 		// Check if forward seek time is smaller than the song duration
+		int seekForwardTime = 5000; // Milli-Seconds
 		if(currentPosition + seekForwardTime <= player.getDuration()){
 			// Forward song
 			player.seekTo(currentPosition + seekForwardTime);
@@ -135,6 +118,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 	public void rewind(View view){
 		int currentPosition = player.getCurrentPosition();
 		// Check if rewind seek time is greater than 0
+		int seekRewindTime = 5000; // Milli-Seconds
 		if(currentPosition - seekRewindTime >= 0){
 			// Rewind sond
 			player.seekTo(currentPosition - seekRewindTime);
@@ -265,13 +249,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 			updateProgressBar();
 			
 		}
-		catch(IllegalArgumentException e){
-			Log.d(tagg, "Exception Thrown While Playing A Song", e);
-		}
-		catch(IllegalStateException e){
-			Log.d(tagg, "Exception Thrown While Playing A Song", e);
-		}
-		catch(IOException e){
+		catch(IllegalArgumentException | IllegalStateException | IOException e){
 			Log.d(tagg, "Exception Thrown While Playing A Song", e);
 		}
 	}
@@ -297,7 +275,7 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 			songCurrentDuration.setText(""+utils.mSecondsToTimer(currentDuration));
 			
 			// Update progress bar
-			int progress = (int)(utils.getProgressPercentage(currentDuration, totalDuration));
+			int progress = utils.getProgressPercentage(currentDuration, totalDuration);
 			// Log.d(tagg, "Song in progress" + progress);
 			songProgressBar.setProgress(progress);
 			
@@ -389,28 +367,6 @@ public class MainActivity extends ActionBarActivity implements OnCompletionListe
 		// automatically handle clicks on the Home/Up button, so long
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			return true;
-		}
-		return super.onOptionsItemSelected(item);
+		return id == R.id.action_settings || super.onOptionsItemSelected(item);
 	}
-	
-		
-	/**
-	 * A placeholder fragment containing a simple view.
-	 */
-	public static class PlaceholderFragment extends Fragment {
-
-		public PlaceholderFragment() {
-		}
-
-		@Override
-		public View onCreateView(LayoutInflater inflater, ViewGroup container,
-				Bundle savedInstanceState) {
-			View rootView = inflater.inflate(R.layout.fragment_main, container,
-					false);
-			return rootView;
-		}
-	}
-
 }

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle" >
+    <gradient android:startColor="#fccd4d"
+        android:centerColor="#f8b500"
+        android:endColor="#09adb9"
+        android:angle="270" />
+    
+</shape>
+<!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/src/main/res/drawable-hdpi/gradient_bg_hover.xml -->
