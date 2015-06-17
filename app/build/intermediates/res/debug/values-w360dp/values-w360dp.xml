@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-w360dp/values.xml -->
+=======
+    <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-w360dp/values-w360dp.xml -->
+>>>>>>> develop_Music
     <eat-comment/>
     <integer name="abc_max_action_buttons">3</integer>
 </resources>

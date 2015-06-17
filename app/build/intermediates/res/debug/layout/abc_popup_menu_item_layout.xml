@@ -4,9 +4,15 @@
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
      You may obtain a copy of the License at
+<<<<<<< HEAD
   
           http://www.apache.org/licenses/LICENSE-2.0
   
+=======
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+>>>>>>> develop_Music
      Unless required by applicable law or agreed to in writing, software
      distributed under the License is distributed on an "AS IS" BASIS,
      WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -16,10 +22,17 @@
 
 <android.support.v7.internal.view.menu.ListMenuItemView
         xmlns:android="http://schemas.android.com/apk/res/android"
+<<<<<<< HEAD
         android:layout_width="fill_parent"
         android:layout_height="?attr/dropdownListPreferredItemHeight"
         android:minWidth="196dip"
         android:paddingRight="16dip">
+=======
+        android:layout_width="match_parent"
+        android:layout_height="?attr/dropdownListPreferredItemHeight"
+        android:minWidth="196dip"
+        style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem">
+>>>>>>> develop_Music
 
     <!-- Icon will be inserted here. -->
 
@@ -29,6 +42,7 @@
             android:layout_weight="1"
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
+<<<<<<< HEAD
             android:layout_marginLeft="16dip"
             android:duplicateParentState="true">
 
@@ -38,25 +52,51 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentLeft="true"
+=======
+            android:duplicateParentState="true"
+            style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup">
+
+        <TextView
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+>>>>>>> develop_Music
                 android:textAppearance="?attr/textAppearanceLargePopupMenu"
                 android:singleLine="true"
                 android:duplicateParentState="true"
                 android:ellipsize="marquee"
+<<<<<<< HEAD
                 android:fadingEdge="horizontal"/>
+=======
+                android:fadingEdge="horizontal"
+                style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" />
+>>>>>>> develop_Music
 
         <TextView
                 android:id="@+id/shortcut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/title"
+<<<<<<< HEAD
                 android:layout_alignParentLeft="true"
                 android:textAppearance="?attr/textAppearanceSmallPopupMenu"
                 android:singleLine="true"
                 android:duplicateParentState="true"/>
+=======
+                android:textAppearance="?attr/textAppearanceSmallPopupMenu"
+                android:singleLine="true"
+                android:duplicateParentState="true"
+                style="@style/RtlOverlay.Widget.AppCompat.PopupMenuItem.Text" />
+>>>>>>> develop_Music
 
     </RelativeLayout>
 
     <!-- Checkbox, and/or radio button will be inserted here. -->
 
 </android.support.v7.internal.view.menu.ListMenuItemView>
+<<<<<<< HEAD
 <!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/klp-ub-dev/frameworks/support/v7/appcompat/res/layout/abc_popup_menu_item_layout.xml --><!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_popup_menu_item_layout.xml -->
+=======
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_popup_menu_item_layout.xml --><!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_popup_menu_item_layout.xml -->
+>>>>>>> develop_Music

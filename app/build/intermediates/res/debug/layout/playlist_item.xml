@@ -11,7 +11,18 @@
         android:layout_height="wrap_content"
         android:textSize="16sp"
         android:padding="10dp"
+<<<<<<< HEAD
         android:textColor="#000000" />
+=======
+        android:textColor="#000000"
+        android:gravity="start"
+        android:ellipsize="marquee"
+        android:singleLine="true"
+        android:marqueeRepeatLimit="marquee_forever"
+        android:focusable="true"
+        android:freezesText="true"
+        android:scrollHorizontally="true"/>
+>>>>>>> develop_Music
     
 </LinearLayout>
 <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/src/main/res/layout/playlist_item.xml -->

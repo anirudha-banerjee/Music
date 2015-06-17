@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-xlarge/values.xml -->
     <eat-comment/>
     <bool name="abc_action_bar_expanded_action_views_exclusive">false</bool>
@@ -10,6 +11,11 @@
     <dimen name="abc_action_bar_subtitle_top_margin">-3dp</dimen>
     <dimen name="abc_action_bar_title_text_size">18dp</dimen>
     <dimen name="abc_action_button_min_width">64dip</dimen>
+=======
+    <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-xlarge/values-xlarge.xml -->
+    <eat-comment/>
+    <bool name="abc_action_bar_expanded_action_views_exclusive">false</bool>
+>>>>>>> develop_Music
     <dimen name="abc_search_view_text_min_width">192dip</dimen>
     <item name="dialog_fixed_height_major" type="dimen">60%</item>
     <item name="dialog_fixed_height_minor" type="dimen">90%</item>

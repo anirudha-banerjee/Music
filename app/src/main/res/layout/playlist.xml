@@ -10,8 +10,7 @@
         android:layout_height="fill_parent"
         android:background="@android:color/transparent"
         android:divider="@android:color/transparent"
-        android:dividerHeight="3dp"
+        android:dividerHeight="5dp"
         android:listSelector="@drawable/list_selector" />
-    
 
 </LinearLayout>

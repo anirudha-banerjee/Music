@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<<<<<<< HEAD
     <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/values-ar/values.xml -->
+=======
+    <!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/values-ar/values-ar.xml -->
+>>>>>>> develop_Music
     <eat-comment/>
     <string msgid="4600421777120114993" name="abc_action_bar_home_description">"التنقل إلى الشاشة الرئيسية"</string>
     <string msgid="1594238315039666878" name="abc_action_bar_up_description">"التنقل إلى أعلى"</string>
@@ -14,5 +18,9 @@
     <string msgid="8928215447528550784" name="abc_searchview_description_submit">"إرسال طلب البحث"</string>
     <string msgid="893419373245838918" name="abc_searchview_description_voice">"البحث الصوتي"</string>
     <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
+<<<<<<< HEAD
     <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"مشاركة مع %s"</string>
+=======
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏مشاركة مع %s"</string>
+>>>>>>> develop_Music
 </resources>

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle" >
+<<<<<<< HEAD
     <gradient android:startColor="#18d7e5"
         android:centerColor="#16cedb"
+=======
+    <gradient android:startColor="#fccd4d"
+        android:centerColor="#f8b500"
+>>>>>>> develop_Music
         android:endColor="#09adb9"
         android:angle="270" />
     

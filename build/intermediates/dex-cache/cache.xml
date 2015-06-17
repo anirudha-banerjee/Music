@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/pre-dexed/debug/classes-9896472042f008e795624068d8f02513a1b59b29.jar" />
+    </item>
+    <item
+        jar="/root/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.0/support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.0-cb45de25033c3665320dd2cafe5df424fd028375.jar" />
+    </item>
+    <item
+        jar="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/libs/internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.0-3334121b80f1d7870f804cf720203004b840614a.jar" />
+    </item>
+    <item
+        jar="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.0/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/pre-dexed/debug/classes-c53bb096ff669e1faff41c1a7ba39426a1a0068c.jar" />
+    </item>
+
+</items>

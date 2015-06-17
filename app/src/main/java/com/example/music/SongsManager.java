@@ -13,7 +13,7 @@ import android.widget.Toast;
 
 public class SongsManager extends ContextWrapper {
 	
-	private ArrayList<HashMap<String, String>> songsList = new ArrayList<HashMap<String, String>>();
+	private ArrayList<HashMap<String, String>> songsList = new ArrayList<>();
 	
 	Cursor cursor;
 	
@@ -30,11 +30,7 @@ public class SongsManager extends ContextWrapper {
 	public ArrayList<HashMap<String, String>> getplaylist(){
 		ContentResolver cr = getContentResolver();
 		
-
-		
 		// Process to read all music files from sdcard
-		
-		
 		
 		Uri uri = android.provider.MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
 						

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
 /*
+<<<<<<< HEAD
  * Copyright (C) 2013 The Android Open Source Project
+=======
+ * Copyright (C) 2014 The Android Open Source Project
+>>>>>>> develop_Music
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,6 +21,7 @@
  */
 
 -->
+<<<<<<< HEAD
 <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/search_bar"
@@ -24,6 +29,13 @@
         android:layout_height="match_parent"
         android:orientation="horizontal"
         >
+=======
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/search_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+>>>>>>> develop_Music
 
     <!-- This is actually used for the badge icon *or* the badge label (or neither) -->
     <TextView
@@ -35,19 +47,30 @@
             android:drawablePadding="0dip"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="?android:attr/textColorPrimary"
+<<<<<<< HEAD
             android:visibility="gone"
             />
 
     <ImageView
+=======
+            android:visibility="gone" />
+
+    <android.support.v7.internal.widget.TintImageView
+>>>>>>> develop_Music
             android:id="@+id/search_button"
             style="?attr/actionButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="center_vertical"
+<<<<<<< HEAD
             android:src="?attr/searchViewSearchIcon"
             android:focusable="true"
             android:contentDescription="@string/abc_searchview_description_search"
             />
+=======
+            android:focusable="true"
+            android:contentDescription="@string/abc_searchview_description_search" />
+>>>>>>> develop_Music
 
     <LinearLayout
             android:id="@+id/search_edit_frame"
@@ -59,18 +82,31 @@
             android:layout_marginBottom="4dip"
             android:layout_marginLeft="8dip"
             android:layout_marginRight="8dip"
+<<<<<<< HEAD
             android:orientation="horizontal">
 
         <ImageView
+=======
+            android:orientation="horizontal"
+            android:layoutDirection="locale">
+
+        <android.support.v7.internal.widget.TintImageView
+>>>>>>> develop_Music
                 android:id="@+id/search_mag_icon"
                 android:layout_width="@dimen/abc_dropdownitem_icon_width"
                 android:layout_height="wrap_content"
                 android:scaleType="centerInside"
+<<<<<<< HEAD
                 android:layout_marginLeft="@dimen/abc_dropdownitem_text_padding_left"
                 android:layout_gravity="center_vertical"
                 android:src="?attr/searchViewSearchIcon"
                 android:visibility="gone"
                 />
+=======
+                android:layout_gravity="center_vertical"
+                android:visibility="gone"
+                style="@style/RtlOverlay.Widget.AppCompat.SearchView.MagIcon" />
+>>>>>>> develop_Music
 
         <!-- Inner layout contains the app icon, button(s) and EditText -->
         <LinearLayout
@@ -79,11 +115,17 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_gravity="center_vertical"
+<<<<<<< HEAD
                 android:orientation="horizontal"
                 android:background="?attr/searchViewTextField">
 
             <view class="android.support.v7.widget.SearchView$SearchAutoComplete"
                   style="?attr/searchViewAutoCompleteTextView"
+=======
+                android:orientation="horizontal">
+
+            <view class="android.support.v7.widget.SearchView$SearchAutoComplete"
+>>>>>>> develop_Music
                   android:id="@+id/search_src_text"
                   android:layout_height="36dip"
                   android:layout_width="0dp"
@@ -100,22 +142,34 @@
                   android:dropDownHeight="wrap_content"
                   android:dropDownAnchor="@id/search_edit_frame"
                   android:dropDownVerticalOffset="0dip"
+<<<<<<< HEAD
                   android:dropDownHorizontalOffset="0dip"
                   android:contentDescription="@string/abc_searchview_description_query"
                     />
 
             <ImageView
+=======
+                  android:dropDownHorizontalOffset="0dip" />
+
+            <android.support.v7.internal.widget.TintImageView
+>>>>>>> develop_Music
                     android:id="@+id/search_close_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:paddingLeft="8dip"
                     android:paddingRight="8dip"
                     android:layout_gravity="center_vertical"
+<<<<<<< HEAD
                     android:background="?attr/selectableItemBackground"
                     android:src="?attr/searchViewCloseIcon"
                     android:focusable="true"
                     android:contentDescription="@string/abc_searchview_description_clear"
                     />
+=======
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:focusable="true"
+                    android:contentDescription="@string/abc_searchview_description_clear" />
+>>>>>>> develop_Music
 
         </LinearLayout>
 
@@ -123,16 +177,23 @@
                 android:id="@+id/submit_area"
                 android:orientation="horizontal"
                 android:layout_width="wrap_content"
+<<<<<<< HEAD
                 android:layout_height="match_parent"
                 android:background="?attr/searchViewTextFieldRight">
 
             <ImageView
+=======
+                android:layout_height="match_parent">
+
+            <android.support.v7.internal.widget.TintImageView
+>>>>>>> develop_Music
                     android:id="@+id/search_go_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="16dip"
                     android:paddingRight="16dip"
+<<<<<<< HEAD
                     android:background="?attr/selectableItemBackground"
                     android:src="?attr/searchViewGoIcon"
                     android:visibility="gone"
@@ -141,12 +202,21 @@
                     />
 
             <ImageView
+=======
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="gone"
+                    android:focusable="true"
+                    android:contentDescription="@string/abc_searchview_description_submit" />
+
+            <android.support.v7.internal.widget.TintImageView
+>>>>>>> develop_Music
                     android:id="@+id/search_voice_btn"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center_vertical"
                     android:paddingLeft="16dip"
                     android:paddingRight="16dip"
+<<<<<<< HEAD
                     android:src="?attr/searchViewVoiceIcon"
                     android:background="?attr/selectableItemBackground"
                     android:visibility="gone"
@@ -157,3 +227,13 @@
     </LinearLayout>
 
 </LinearLayout><!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/klp-ub-dev/frameworks/support/v7/appcompat/res/layout/abc_search_view.xml --><!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/res/layout/abc_search_view.xml -->
+=======
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:visibility="gone"
+                    android:focusable="true"
+                    android:contentDescription="@string/abc_searchview_description_voice" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
+<!-- From: file:/usr/local/google/buildbot/repo_clients/https___googleplex-android.googlesource.com_a_platform_manifest.git/lmp-mr1-supportlib-release/frameworks/support/v7/appcompat/res/layout/abc_search_view.xml --><!-- From: file:/home/yatis/Documents/anirudha_personal/dev_work/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.0/res/layout/abc_search_view.xml -->
+>>>>>>> develop_Music
